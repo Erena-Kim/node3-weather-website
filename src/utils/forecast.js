@@ -18,7 +18,10 @@ const forecast = (latitude, longitude, callback) => {
         const current = body.current;
         callback(
           undefined,
-          `It is ${current.observation_time} now. ${current.weather_descriptions[0]}. It is currently ${current.temperature} degrees out. It feels like ${current.feelslike} degrees out. Also, wind speed is ${current.wind_speed}.`
+          `${current.weather_descriptions[0]}.
+          It is currently ${current.temperature} degrees out.
+          It feels like ${current.feelslike} degrees out.
+          Also, wind speed is ${current.wind_speed}.`
         );
       }
     } //function to run when we actually get error/response back
